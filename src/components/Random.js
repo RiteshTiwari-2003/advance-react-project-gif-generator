@@ -1,7 +1,13 @@
 import React,{useState} from 'react'
-
+const API_KEY=process.env.REACT_APP_GIPHY_API_KEY;
 const Random = () => {
     const [gif,setGif]=useState('');
+    
+    async function fetchData(){
+      const url=`https://api.gipfy.com/v1/gifs/random?api_key=${API_KEY}`;
+      axios.get(url);
+
+    }
     function clickHandler(){
 
     }
